@@ -1,14 +1,19 @@
 import React from 'react'
+import '../CartWidget/CartWidget.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
+      <Container >
         <Navbar.Brand href="#home">🈹​ Tiendapp</Navbar.Brand>
+        <Nav.Item class= "d-lg-none ms-auto">
+        <CartWidget></CartWidget>
+        </Nav.Item>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -25,14 +30,16 @@ const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
-            <Nav.Link href="#deets">Contacto</Nav.Link>
+          <Nav class= "d-none d-sm-block">
+            <Nav.Item><CartWidget ></CartWidget></Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
 );
 };
+
+
 
 export default NavBar
 
