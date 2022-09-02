@@ -6,3 +6,10 @@ background-color: grey;
    text-align: center;
    color: white;
 }
+
+.ItemContainer {
+	display: flex;
+   	margin-top: 20px;
+	justify-content: center;
+	background: rgb(2,0,36);
+}
