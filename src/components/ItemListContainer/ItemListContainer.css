@@ -8,8 +8,17 @@ background-color: grey;
 }
 
 .ItemContainer {
-	display: flex;
+	display: block;
    	margin-top: 20px;
 	justify-content: center;
 	background: rgb(2,0,36);
 }
+
+.wall {
+   /* columns:4;
+   column-gap: 1em; */
+   max-width: 800px;
+   display: block;
+   margin: auto;
+   padding-top: 60px;
+ }

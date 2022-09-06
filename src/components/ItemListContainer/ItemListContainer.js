@@ -1,8 +1,9 @@
 import React from 'react';
 import './ItemListContainer.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
+
+
 
 
 const ItemListContainer = ({greeting}) => {
@@ -20,9 +21,9 @@ const ItemListContainer = ({greeting}) => {
         <div>
           <ItemCount stock={5} initial={1} onAdd={added} />
           </div>
-          <div className='ItemContainer'>
-				<ItemList />
-			</div>
+          <div>
+            <ItemList />
+            </div>
     </div>
 
   );

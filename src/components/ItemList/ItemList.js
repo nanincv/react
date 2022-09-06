@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Item from '../Item/Item';
 
 
@@ -12,12 +13,18 @@ const ItemList = () => {
 	}, []);
 
 	return (
-		<div >
+ <div className='container '>
+        <div className='d-flex justify-content-around"'>
+            <div className='col-4'>
 			{items.map((item) => {
 				return <Item key={item.id} data={item} />;
 			})}
-		</div>
+        </div>
+    </div>
+</div>
 	);
 };
 
 export default ItemList;
+
+

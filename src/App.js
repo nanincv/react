@@ -4,16 +4,16 @@ import './components/CartWidget/CartWidget.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetail/ItemDetail';
 
-function App() {
+const App =() => {
   return (
     <div className="App">
     <NavBar/>
-    <ItemListContainer
+
+      <ItemDetailContainer/>
     
-    greeting="Bienvenidos a mi tienda!"
-    
-    />
+
     </div>
   );
 }

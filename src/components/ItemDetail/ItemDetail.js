@@ -4,7 +4,8 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Item ( {data} ) {
+
+function ItemDetail( {data} ) {
   return (
     <div className="row row-cols-4">
     <Card style={{ width: '18rem', }}>
@@ -15,12 +16,12 @@ function Item ( {data} ) {
           {data.description}
         </Card.Text>
         <Card.Text> $ {data.price} </Card.Text>
-        <Button variant="primary">Do something</Button>
+        <Button variant="primary">BUY</Button>
       </Card.Body>
     </Card>
     </div>
   );
 }
 
-export default Item;
+export default ItemDetail;
 
