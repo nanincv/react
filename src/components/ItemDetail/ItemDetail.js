@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ItemDetail( {data} ) {
   return (
-    <div className="row row-cols-4">
+    <div >
     <Card style={{ width: '18rem', }}>
       <Card.Img variant="top" src={data.image} />
       <Card.Body>
