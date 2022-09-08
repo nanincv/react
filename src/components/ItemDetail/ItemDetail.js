@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
 function ItemDetail( {data} ) {
   return (
     <div >
