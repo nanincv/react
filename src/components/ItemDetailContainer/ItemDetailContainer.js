@@ -3,23 +3,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 
-const ItemListContainer = () => {
-	const [data, setData] = useState([]);
+const ItemDetailContainer = () => {
+	const [item, setItem] = useState([]);
 
 	useEffect(() => {
-		fetch('https://fakestoreapi.com/products')
+		fetch('https://fakestoreapi.com/products/1' )
 			.then((response) => response.json())
-			.then((json) => setData(json));
+			.then((json) => setItem(json));
 	}, []);
 
 	return (
  <div className='container '>
-			 <ItemDetail item={data} />;
+			 <ItemDetail data={item} />;
       </div>
 	);
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;
 
 
 
