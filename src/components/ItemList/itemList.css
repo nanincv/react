@@ -1,0 +1,7 @@
+.Contenedor-Productos {
+    display: grid;
+  grid-template-rows: 20%;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-gap: 2px;
+
+};
