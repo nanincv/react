@@ -3,7 +3,7 @@ import './components/ItemListContainer/ItemListContainer.css';
 import './components/CartWidget/CartWidget.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemDetailContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 const App =() => {
