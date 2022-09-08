@@ -17,7 +17,7 @@ function ItemDetail( {data} ) {
           {data.description}
         </Card.Text>
         <Card.Text> $ {data.price} </Card.Text>
-        <Button variant="primary"></Button>
+        <Button variant="primary">Comprar</Button>
       </Card.Body>
     </Card>
     </div>
