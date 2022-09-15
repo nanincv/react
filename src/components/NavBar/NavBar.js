@@ -33,7 +33,7 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav class= "d-none d-sm-block">
-            <Nav.Item><CartWidget ></CartWidget></Nav.Item>
+            <Nav.Item as= {Link} to='/cart'><CartWidget></CartWidget></Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
