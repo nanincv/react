@@ -5,15 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
+import useCartContext from '../../Context/CartContext';
 
 
 
-function ItemDetail( {data} ) {
+const ItemDetail = ( {data} ) => {
   const [ isInCart, setIsInCart] = useState(false);
+  const {addToCart} = useCartContext();
 
   const added = (counter) => {
-    alert (`Has agregado ${ItemCount.number} items al carrito`);
     setIsInCart (true);
+    addToCart( data, counter)
+    console.log ("Agregaste al carrito:", data, counter)
   };
   
   return (
