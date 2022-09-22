@@ -38,6 +38,8 @@ export function CartContextProvider ({children}) {
 
 
 }
+
+///me quedé en tema carrito
  const isInCart = () => {
     
  }
