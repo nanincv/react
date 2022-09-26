@@ -6,6 +6,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
 import useCartContext from '../../Context/CartContext';
+import Spinner from 'react-bootstrap/Spinner';
 
 
 
@@ -18,10 +19,17 @@ const ItemDetail = ( {data} ) => {
     addToCart( data, counter)
     console.log ("Agregaste al carrito:", data, counter)
   };
+
+  if (!data.image) { 
+    return <Spinner animation="grow" variant="info" style={ { margin:'250px', alignItems: 'center' }}>
+    <span className="visually-hidden">Loading...</span>
+  </Spinner>
+
+  };
   
   return (
     <div >
-    <Card style={{ width: '18rem', }}>
+    <Card style={{ width: '18rem', margin: "50px"}}>
       <Card.Img variant="top" src={data.image} />
       <Card.Body>
         <Card.Title>{data.title}</Card.Title>

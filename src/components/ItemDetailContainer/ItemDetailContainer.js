@@ -4,6 +4,7 @@ import ItemDetail  from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
 
+
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState([]);
 
@@ -14,6 +15,7 @@ const ItemDetailContainer = () => {
 			.then((response) => response.json())
 			.then((json) => setItem(json));
 	}, [id]);
+
 
 	return (
         <div className="d-flex justify-content-center">
