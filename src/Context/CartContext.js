@@ -34,8 +34,8 @@ export function CartContextProvider ({children}) {
 
     const removeFromCart = (id) => {
         const newCart= [...cart];
-        const cartFilter = newCart.filter ( item => {
-            return item.id !== id;
+        const cartFilter = newCart.filter ( itemCart => {
+            return itemCart.id !== id;
         });
         setCart (cartFilter);
     }
