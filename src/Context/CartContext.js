@@ -48,13 +48,24 @@ export function CartContextProvider ({children}) {
         return cart.some (itemCart => itemCart.id === id );
         
      }
-
+      
+     const cantInCart= () => {
+        let total = 0;
+        cart.forEach((itemCart) => (total = total + itemCart.cant));
+        return total;
+      }
+    
+      const  totalPriceCart = () => {
+        let total = 0;
+        cart.forEach((itemCart) => (total = total + itemCart.cant * itemCart.price));
+        return total;
+      }
 
 
 
 
     return ( 
-        <CartContext.Provider value= {{ cart, addToCart, removeFromCart, clearCart } } >
+        <CartContext.Provider value= {{ cart, addToCart, removeFromCart, clearCart, cantInCart , totalPriceCart } } >
         {children}
         </CartContext.Provider>
 

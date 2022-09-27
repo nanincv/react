@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 
 
 const Cart = () => {
- const {cart, removeFromCart, clearCart} = useCartContext();
+ const {cart, removeFromCart, clearCart, totalPriceCart} = useCartContext();
  console.log ("CART", cart);
  
  if (cart.length === 0) {
@@ -23,11 +23,12 @@ else {
       <img width={"100px"} src={itemCart.image} ></img>
       <h2>{itemCart.title}</h2>
       <h2>{itemCart.cant}</h2>
-      <h2>{itemCart.price}</h2>
+      <h2>$ {itemCart.price}</h2>
       <button style={{color:"red"}} onClick={()=> removeFromCart(itemCart.id)} >x</button>
       <hr/><br></br>
       </div>
     })}
+      <h5>Total a pagar: ${totalPriceCart().toFixed(2)}{" "}</h5>
       <Button onClick={clearCart} >Vaciar Carrito</Button>
       </div>
 
