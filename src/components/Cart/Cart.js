@@ -20,7 +20,7 @@ else {
     {cart.map ( itemCart => {
          //Acá va tabla de bootstrap 
     return <div key={itemCart.id}>
-      <img width={"100px"} src={itemCart.image} ></img>
+      <img alt={itemCart.title} width={"100px"} src={itemCart.image} ></img>
       <h2>{itemCart.title}</h2>
       <h2>{itemCart.cant}</h2>
       <h2>$ {itemCart.price}</h2>
