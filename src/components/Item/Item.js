@@ -10,14 +10,14 @@ function Item ( {data} ) {
   return (
     <Col>
     <Card style={{ width: '18rem', }}>
-      <Card.Img variant="top" src={data.image} />
+      <Card.Img variant="top" src={data.img} />
       <Card.Body>
-        <Card.Title>{data.title}</Card.Title>
+        <Card.Title>{data.name}</Card.Title>
         <Card.Text>
-          {data.description}
+          {data.flavor}
         </Card.Text>
         <Card.Text> $ {data.price} </Card.Text>
-        <Button as={Link} to={`/producto/${data.id}`} variant="primary">Do something</Button>
+        <Button as={Link} to={`/producto/${data.id}`} variant="primary">Ver producto</Button>
       </Card.Body>
     </Card>
     </Col>
