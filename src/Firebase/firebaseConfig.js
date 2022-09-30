@@ -1,4 +1,3 @@
-
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, getDoc, query, where, getDocs } from "firebase/firestore";
 
@@ -14,9 +13,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore (app);
+const firestoreDB= getFirestore (app);
 
-export function async getAllItems () {
-    const miCol = collection (fireStoreDB, 'emulsions');
-    getDocs (miCol). then ( result => console.log (result) );
+export default firestoreDB;
+
+export async function getAllItems () {
+    const miCol = collection (firestoreDB, 'emulsiones');
+    const emulsionsSnap = await getDocs (miCol);
+
+    return emulsionsSnap.docs.map( doc => doc.data());
 }

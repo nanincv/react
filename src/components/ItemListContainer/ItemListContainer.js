@@ -1,27 +1,36 @@
-import React from 'react';
-import './ItemListContainer.css';
+import React, {useEffect, useState} from 'react';
 import ItemList from '../ItemList/ItemList';
+import Spinner from 'react-bootstrap/Spinner';
+import Item from '../Item/Item';
 
 
+const ItemListContainer = () => {
+	const [items, setItems] = useState([]);
 
+	useEffect(() => {
+		fetch('https://fakestoreapi.com/products')
+			.then((response) => response.json())
+			.then((json) => setItems(json));
+	}, []);
 
-const ItemListContainer = ({greeting}) => {
-
-
-  return (
-    <div >
-    <div className="ItemList">
-        <h1>{greeting}</h1>
-        </div>
-          <div>
-            <ItemList />
-            </div>
-    </div>
-
-  );
+	if (!Item) { 
+		return <Spinner animation="grow" variant="info" style={ { margin:'50vh', alignItems: 'center' }}>
+		<span className="visually-hidden">Loading...</span>
+	  </Spinner>
 
 }
+return (
+  <div >
+  <div className="ItemList">
+      <h1>Productos</h1>
+      </div>
+        <div>
+          <ItemList emulsiones = {items} />
+          </div>
+  </div>
 
-export default ItemListContainer
+);
+}
 
+export default ItemListContainer;
 

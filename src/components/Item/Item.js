@@ -1,13 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 
 function Item ( {data} ) {
   return (
-    <div className="row row-cols-4">
+    <Col>
     <Card style={{ width: '18rem', }}>
       <Card.Img variant="top" src={data.image} />
       <Card.Body>
@@ -16,10 +17,10 @@ function Item ( {data} ) {
           {data.description}
         </Card.Text>
         <Card.Text> $ {data.price} </Card.Text>
-        <Button as={Link} to={`/producto/${data.id}`} variant="primary">Ver producto</Button>
+        <Button as={Link} to={`/producto/${data.id}`} variant="primary">Do something</Button>
       </Card.Body>
     </Card>
-    </div>
+    </Col>
   );
 }
 
