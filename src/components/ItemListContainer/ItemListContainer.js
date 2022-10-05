@@ -9,7 +9,6 @@ const ItemListContainer = () => {
 	const [items, setItems] = useState([]);
 
 	useEffect(() => {
-
     getEmulsions ().then ( respuesta => {
       setItems (respuesta);
     });
