@@ -29,16 +29,18 @@ const ItemDetail = ( {data} ) => {
   
   return (
     <div >
-    <Card style={{ width: '18rem', margin: "50px"}}>
+    <Card style={{ width: '30rem', margin: "50px"}}>
       <Card.Img variant="top" src={data.img} />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
-        <Card.Text>
-          {data.flavor}
-        </Card.Text>
-        <Card.Text> $ {data.price} </Card.Text>
+        <Card.Text>Sabor: {data.flavor}</Card.Text>
+        <Card.Text>Sabor: {data.description}</Card.Text>
+        <Card.Text><h4>Precio: ${data.price} </h4></Card.Text>
         { isInCart ?
-            <Button as={Link} to="/cart">Terminar compra</Button>
+            <div>
+            <Button style={{margin:'10px'}} as={Link} to="/cart">Terminar compra</Button> 
+            <Button style={{margin:'10px'}} as={Link} to="/tienda">Seguir comprando</Button>
+            </div>
         :
           <ItemCount stock={5} initial={1} onAdd={added} />
         }

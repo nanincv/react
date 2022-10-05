@@ -15,7 +15,8 @@ const ItemList = ({emulsiones} ) => {
 } else
  
 	return (
- <Container className="mt-5">
+
+ <Container className="mt-5 d-flex justify-content-center">
 	<Row className="g-4">
 			{emulsiones.map((item) => {
 				return <Item key={item.id} data={item} />;
