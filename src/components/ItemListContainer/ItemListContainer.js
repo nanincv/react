@@ -2,17 +2,27 @@ import React, {useEffect, useState} from 'react';
 import ItemList from '../ItemList/ItemList';
 import Spinner from 'react-bootstrap/Spinner';
 import Item from '../Item/Item';
-import { getAllItems as getEmulsions } from '../../Firebase/firebaseConfig';
+import { getAllItems as getEmulsions, getItemCat } from '../../Firebase/firebaseConfig';
+import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = () => {
 	const [items, setItems] = useState([]);
+  const { categoryid } = useParams();
 
 	useEffect(() => {
-    getEmulsions ().then ( respuesta => {
-      setItems (respuesta);
-    });
-	}, []);
+    if ( categoryid === undefined) {
+      getEmulsions ().then ( respuesta => {
+        setItems (respuesta);
+      });
+    }
+    else {
+      getItemCat (categoryid).then ( respuesta => {
+        setItems (respuesta);
+      });
+
+    }
+	}, [categoryid]);
  
 	if (!Item) { 
 		return <Spinner animation="grow" variant="info" style={ { margin:'50vh', alignItems: 'center' }}>

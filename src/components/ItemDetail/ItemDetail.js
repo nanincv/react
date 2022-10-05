@@ -20,7 +20,7 @@ const ItemDetail = ( {data} ) => {
     console.log ("Agregaste al carrito:", data, counter)
   };
 
-  if (!data.image) { 
+  if (!data.img) { 
     return <Spinner animation="grow" variant="info" style={ { margin:'250px', alignItems: 'center' }}>
     <span className="visually-hidden">Loading...</span>
   </Spinner>
@@ -30,11 +30,11 @@ const ItemDetail = ( {data} ) => {
   return (
     <div >
     <Card style={{ width: '18rem', margin: "50px"}}>
-      <Card.Img variant="top" src={data.image} />
+      <Card.Img variant="top" src={data.img} />
       <Card.Body>
-        <Card.Title>{data.title}</Card.Title>
+        <Card.Title>{data.name}</Card.Title>
         <Card.Text>
-          {data.description}
+          {data.flavor}
         </Card.Text>
         <Card.Text> $ {data.price} </Card.Text>
         { isInCart ?

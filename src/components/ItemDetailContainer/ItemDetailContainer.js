@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetail  from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { getItem } from '../../Firebase/firebaseConfig';
 
 
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState([]);
-
-	let { id } = useParams();
+    const { id } = useParams();
 
 	useEffect(() => {
-		fetch(`https://fakestoreapi.com/products/${id}`)
-			.then((response) => response.json())
-			.then((json) => setItem(json));
+		getItem (id).then ( (respuesta) => {
+			setItem (respuesta);
+		});
 	}, [id]);
 
 

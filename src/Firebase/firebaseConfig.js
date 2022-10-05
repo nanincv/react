@@ -37,14 +37,15 @@ export async function getItemCat(categoryid) {
 
     const emulsionsSnap = await getDocs (queryEmulsion);
 
-    return emulsionsSnap.docs.map( doc => {  
-        return {  
-          ...doc.data(),
-          id:doc.id  
+    return emulsionsSnap.docs.map( doc => {
+      return {
+      ...doc.data(),
+      id: doc.id
       }
-      });
+    });
 }
 
+//un solo item
 export async function getItem(id){
     const miCol = collection (firestoreDB, 'emulsiones');
     const itemRef = doc(miCol, id);
@@ -52,3 +53,4 @@ export async function getItem(id){
 
     return { ...emulsionsSnap.data(), id: emulsionsSnap.id };
 }
+

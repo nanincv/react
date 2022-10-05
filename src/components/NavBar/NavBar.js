@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container >
-        <Navbar.Brand href="#home">🈹​ Tiendapp</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/tienda">🈹​ Tiendapp</Navbar.Brand>
         <Nav.Item class= "d-lg-none ms-auto">
         <CartWidget></CartWidget>
         </Nav.Item>
@@ -20,15 +20,13 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/tienda">Tienda</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Categoría 1</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-               Categoría 2
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Categoría 3</NavDropdown.Item>
+            <NavDropdown title="Líneas" id="collapsible-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/lines/classic">Classic</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/lines/blends">Blends</NavDropdown.Item>
+              <NavDropdown.Item href="/lines/soul">Soul</NavDropdown.Item>
+              <NavDropdown.Item href="/lines/secret">Secret</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Destacados
+              <NavDropdown.Item href="/lines/most">Más vendidos
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
