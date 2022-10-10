@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import About from './Views/About';
 import Cart from './components/Cart/Cart';
 import { CartContextProvider } from './Context/CartContext';
+import Header from './components/Header/Header';
 
 
 
@@ -18,6 +19,9 @@ const App =() => {
     <BrowserRouter>
     <div className="App">
     <NavBar/>
+    <div>
+    <Header/>
+    </div>
     <Routes>
       <Route path ='/about' element = {<About/>} />
       <Route path ='/tienda' element= {<ItemListContainer/>} />
@@ -28,6 +32,7 @@ const App =() => {
     </div>
     </BrowserRouter>
   </CartContextProvider>
+  
 
   );
 }

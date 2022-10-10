@@ -32,9 +32,6 @@ const ItemListContainer = () => {
 }
 return (
   <div >
-  <div className="ItemList">
-      <h1>Productos</h1>
-      </div>
         <div>
           <ItemList emulsiones = {items} />
           </div>

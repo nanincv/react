@@ -1,16 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row , Spinner } from 'react-bootstrap';
+import {Container, Row } from 'react-bootstrap';
 import Item from '../Item/Item';
 import './itemList.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 
 const ItemList = ({emulsiones} ) => {
 
 	if (!Item) { 
-		return <Spinner animation="grow" variant="info" style={ { margin:'50vh', alignItems: 'center' }}>
-		<span className="visually-hidden">Loading...</span>
-	  </Spinner>
+		return <Spinner animation="grow" variant="info" style={ { margin:'10vh', alignItems: 'center' }}>
+    	<span className="visually-hidden">Loading...</span>
+  	</Spinner>
 
 } else
  

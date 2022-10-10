@@ -12,7 +12,7 @@ const NavBar = () => {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container >
         <Navbar.Brand as={Link} to="/tienda">🈹​ Tiendapp</Navbar.Brand>
-        <Nav.Item class= "d-lg-none ms-auto">
+        <Nav.Item className= "d-lg-none ms-auto">
         <CartWidget></CartWidget>
         </Nav.Item>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,7 +30,7 @@ const NavBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav class= "d-none d-sm-block">
+          <Nav className= "d-none d-sm-block">
             <Nav.Item as= {Link} to='/cart'><CartWidget></CartWidget></Nav.Item>
           </Nav>
         </Navbar.Collapse>
