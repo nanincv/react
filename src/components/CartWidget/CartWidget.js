@@ -8,7 +8,7 @@ const CartWidget = () => {
   const { cantInCart } = useCartContext();
   return (
          <div>
-        <BagHeart color="white" size={24}></BagHeart>
+        <BagHeart color="#877748" size={24}></BagHeart>
         <Badge pill bg="danger">{cantInCart()}</Badge>
         </div>
   )

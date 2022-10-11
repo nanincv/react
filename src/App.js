@@ -10,7 +10,7 @@ import About from './Views/About';
 import Cart from './components/Cart/Cart';
 import { CartContextProvider } from './Context/CartContext';
 import Header from './components/Header/Header';
-
+import Footer from './components/Footer/Footer';
 
 
 const App =() => {
@@ -29,6 +29,9 @@ const App =() => {
       <Route path = '/cart' element = {<Cart/> } />
       <Route path='/lines/:categoryid' element={<ItemListContainer />}/>
     </Routes>
+    </div>
+    <div>
+    <Footer/>
     </div>
     </BrowserRouter>
   </CartContextProvider>
