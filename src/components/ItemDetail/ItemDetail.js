@@ -21,7 +21,7 @@ const ItemDetail = ( {data} ) => {
   };
 
   if (!data.img) { 
-    return <Spinner animation="grow" variant="info" style={ { margin:'250px', alignItems: 'center' }}>
+    return <Spinner animation="grow" variant="dark" style={ { margin:'250px', alignItems: 'center' }}>
     <span className="visually-hidden">Loading...</span>
   </Spinner>
 
@@ -37,7 +37,7 @@ const ItemDetail = ( {data} ) => {
         <Card.Text>Sabor: {data.description}</Card.Text>
         <Card.Subtitle >Precio: ${data.price}</Card.Subtitle>
         { isInCart ?
-            <div>
+            <div style={{margin:"10px"}}>
             <Button variant="warning" style={{margin:'10px'}} as={Link} to="/cart" size="sm">Terminar compra</Button> 
             <Button variant="warning" style={{margin:'10px'}} as={Link} to="/tienda" size="sm">Seguir comprando</Button>
             </div>

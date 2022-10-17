@@ -3,7 +3,7 @@ import './NavBar.css'
 import '../CartWidget/CartWidget.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../assets/logo_appg.png';
+import logo from '../../assets/logo_appg.png';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
@@ -31,7 +31,6 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav mt-5" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto mt-5">
-            <Nav.Link as={Link} to="/checkout">Checkout</Nav.Link>
             <Nav.Link as={Link} to="/tienda">Tienda</Nav.Link>
             <NavDropdown title="Líneas" id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/lines/classic">Classic</NavDropdown.Item>

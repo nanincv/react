@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## E-commerce Gusteau's BAkery Emulsions
+# Nombre y apellido: Natalia Martorelli
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tienda con catálogo de productos que puede navegarse por las diferentes "líneas" (categorías) de producto.
+En la página de carrito se incluye un formulario para llenar con los datos del comprador. Las órdenes se almacenan en una base de datos de Firebase.
 
-## Available Scripts
 
-In the project directory, you can run:
+# Una vez hecho el git clone del repo, instalar las dependencias con npm install
+# Para levantar el proyecto, correr npm run start
 
-### `npm start`
+![1](https://firebasestorage.googleapis.com/v0/b/gusteau-s.appspot.com/o/firechot_gusteaus.png?alt=media&token=98618728-94a9-467c-8741-00b4e9a63af0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![gif_image](https://firebasestorage.googleapis.com/v0/b/gusteau-s.appspot.com/o/gusteausapp2.gif?alt=media&token=ba3d08be-7289-4886-b431-9e71b0972b4c)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Languajes y herramientas:
+[![HTML5](https://img.shields.io/badge/html%205-grey?style=for-the-badge&logo=html5&logoColor=white&labelColor=8E2DE2)](https://www.w3.org/html/)
+[![CSS3](https://img.shields.io/badge/css%203-grey?style=for-the-badge&logo=css3&logoColor=white&labelColor=8E2DE2)](https://www.w3schools.com/css/)
+[![react-bootstrap](https://img.shields.io/badge/-bootstrap-grey?style=for-the-badge&logo=bootstrap&logoColor=white&labelColor=8E2DE2)](https://react-bootstrap.netlify.app/getting-started/introduction)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-grey?style=for-the-badge&logo=javascript&logoColor=white&labelColor=8E2DE2)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)<br>
+[![node](https://img.shields.io/badge/-node-grey?style=for-the-badge&logo=node.js&logoColor=white&labelColor=8E2DE2)](https://nodejs.org/es/)
+[![firebase](https://img.shields.io/badge/-firebase-grey?style=for-the-badge&logo=firebase&logoColor=white&labelColor=8E2DE2)](https://firebase.google.com/)
+[![git](https://img.shields.io/badge/-git-grey?style=for-the-badge&logo=git&logoColor=white&labelColor=8E2DE2)](https://git-scm.com/)
+[![github](https://img.shields.io/badge/-github-grey?style=for-the-badge&logo=github&logoColor=white&labelColor=8E2DE2)](https://docs.github.com/es)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Proyecto integramente desarrollado en React, con Visual Studio Code,<br>las imagenes tratadas con Adobe Illustrator y Photoshop<br><br>
+<a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/768px-Visual_Studio_Code_1.35_icon.svg.png" alt="visualstudio" width="40" height="40"/> </a><a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a>
 
-### `npm run build`
+## Pre-requisitos
+Necesitas para instalar el software y ejecutarlo en [Visual Studio Code](https://code.visualstudio.com/), con pack [Node.js](https://nodejs.org/es/) previamente instalado, copiar el link de repositorio y ejecutar el comando
+```bash
+git clone https://github.com/nanincv/tiendapp_Martorelli/tree/final
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Repo Github 📄
+Licencia gratuita, repositorio público
+https://github.com/nanincv/tiendapp_Martorelli/tree/final
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acerca del Autor ✒️
+**Natalia Martorelli** - *Diseñadora en Comunicación Visual & Desarrollador Web* 
+<p align="left">
+<a href="https://www.linkedin.com/in/natalia-martorelli-543a5957/" height="30" width="40" /></a></p>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

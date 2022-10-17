@@ -1,5 +1,6 @@
 .Header {
    display: flex;
+   height: 150px;
 }
 .ItemList {
    background-color: white;

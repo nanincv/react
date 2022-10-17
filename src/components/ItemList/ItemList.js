@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 const ItemList = ({emulsiones} ) => {
 
 	if (!Item) { 
-		return <Spinner animation="grow" variant="info" style={ { margin:'10vh', alignItems: 'center' }}>
+		return <Spinner animation="grow" variant="dark" style={ { margin:'10vh', alignItems: 'center' }}>
     	<span className="visually-hidden">Loading...</span>
   	</Spinner>
 
