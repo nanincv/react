@@ -1,8 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap');
+
 .ItemList {
 background-color: grey;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    padding: 10%;
-   font-size: 50px;
+   font-size: 20px;
    text-align: center;
    color: white;
 }
@@ -22,3 +25,10 @@ background-color: grey;
    margin: auto;
    padding-top: 60px;
  }
+ .sectiontitle {
+   margin: 50px 0 50px 0;
+   text-align: center;
+   font-size: 5em;
+   font-family: 'Great Vibes', cursive;
+
+   }

@@ -4,6 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Item from '../Item/Item';
 import { getAllItems as getEmulsions, getItemCat } from '../../Firebase/firebaseConfig';
 import { useParams } from 'react-router-dom';
+import './ItemListContainer.css';
 
 
 const ItemListContainer = () => {
@@ -32,6 +33,9 @@ const ItemListContainer = () => {
 }
 return (
   <div >
+    <div className='sectiontitle'>
+      <p> Nuestros sabores </p>
+    </div>
         <div>
           <ItemList emulsiones = {items} />
           </div>

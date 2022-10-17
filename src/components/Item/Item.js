@@ -17,7 +17,7 @@ function Item ( {data} ) {
           {data.flavor}
         </Card.Text>
         <Card.Text> $ {data.price} </Card.Text>
-        <Button as={Link} to={`/producto/${data.id}`} key={data.id} variant="primary">Ver producto</Button>
+        <Button as={Link} to={`/producto/${data.id}`} key={data.id} variant="dark">Ver producto</Button>
       </Card.Body>
     </Card>
     </Col>

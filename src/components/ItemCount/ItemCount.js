@@ -28,11 +28,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       ItemCount.number = counter
     
       return (
-        <div className='d-flex justify-content-center'>
-          <Button variant="secondary m-2"onClick={handlerCounterDown}>-</Button>   
-          <h1>{counter}</h1>     
-          <Button variant="secondary m-2" onClick={handlerCounterUp}>+</Button>
-          <Button variant="primary" size="sm" className='m-2' onClick={()=> onAdd(counter)}>Agregar al carrito</Button>
+        <div className='d-flex justify-content-center align-items-end' >
+          <Button variant="dark m-2" size="sm" onClick={handlerCounterDown}>-</Button>   
+          <h3>{counter}</h3>     
+          <Button variant="dark m-2" size="sm" onClick={handlerCounterUp}>+</Button>
+          <Button variant="warning" size="sm" className='m-2' onClick={()=> onAdd(counter)}>Agregar al carrito</Button>
         </div>
       );
 }; 

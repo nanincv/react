@@ -1,24 +1,35 @@
-import React from 'react'; 
+import React, {useState} from 'react'; 
 import useCartContext from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Button,  Form, Container, Table} from 'react-bootstrap';
 import { doc, setDoc, serverTimestamp, collection } from "firebase/firestore";
 import firestoreDB from '../../Firebase/firebaseConfig';
+import { useNavigate } from "react-router-dom"
+import Swal from "sweetalert2";  
+import './cart.css'
 
 
-
-//import Table from 'react-bootstrap/Table';
-
-
+const initialState = {
+	name: '',
+	lastname: '',
+	phone: '',
+};
 
 
 const Cart = () => {
  const {cart, removeFromCart, clearCart, totalPriceCart} = useCartContext();
+ const [values, setValues] = useState(initialState);
 
+ const handleOnChange = (e) => {
+  const { value, name } = e.target;
+  setValues({ ...values, [name]: value });
+};
+
+const navigate = useNavigate()
 
  // ordenes
-
- const createOrder = async () => {
+ const createOrder = async (e) => {
+  e.preventDefault();
   let itemsForDB = cart.map((item) => ({
     id: item.id,
     title: item.name,
@@ -26,52 +37,110 @@ const Cart = () => {
     quantity: item.cant,
 }));
   const order = {
-    buyer: {
-    name: "Natalia", 
-    phone: "555-5555", 
-    email: "nmartorelligmail.com"
-    },
+    buyer: values,
     date: serverTimestamp (),
     items: itemsForDB,
     total: totalPriceCart(),
   }
- // console.log (order)
+
+  //Para verifica la orden en consola
+  console.log (order)
+
+  // Ide de la orden y aviso de éxito
   const newOrderRef = doc(collection(firestoreDB, "orders")) 
   await setDoc(newOrderRef, order);
-  alert ( 'Se ha creado tu orden con el ID:' + newOrderRef.id );
-  clearCart();
-
+  Swal.fire(
+    'Gracias por tu compra!',
+    'Se ha creado tu orden con el ID' + newOrderRef.id,
+    'success'
+  )
+  //alert ('Se ha creado tu orden con el ID' + newOrderRef.id);
+ clearCart();
+ navigate ('/tienda')
 
 };
 
 
-
 // cart
 
- 
  if (cart.length === 0) {
   return <div style= {{textAlign:"center", margin: "50vh"}}>
     <p> Su carrito está vacío</p>
-    <Button as={Link} to="/tienda">Volver a la tienda</Button>
+    <Button as={Link} to="/tienda" variant='warning'>Volver a la tienda</Button>
     </div>
     }
 else { 
    return <div>
-    {cart.map ( itemCart => {
+    <Container >
+    <Table striped bordered hover>
+            <thead>
+                <tr>
+                <th></th>
+                <th></th>
+                <th>Producto</th>
+                <th>Unidades</th>
+                <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>{cart.map ( itemCart => {
          //Acá va tabla de bootstrap 
-    return <div key={itemCart.id}>
-      <img alt={itemCart.title} width={"100px"} src={itemCart.img} ></img>
-      <h2>{itemCart.name}</h2>
-      <h2>{itemCart.cant}</h2>
-      <h2>$ {itemCart.price}</h2>
-      <button style={{color:"red"}} onClick={()=> removeFromCart(itemCart.id)} >x</button>
-      <hr/><br></br>
+    return <tr key={itemCart.id}>
+      <th><button style={{color:"red"}} onClick={()=> removeFromCart(itemCart.id)} >x</button></th>
+      <th><img alt={itemCart.title} width={"100px"} src={itemCart.img} ></img></th>
+      <th>{itemCart.name}</th>
+      <th>{itemCart.cant}</th>
+      <th>$ {itemCart.price}</th>
+      </tr>})}
+    </tbody>
+    <tbody>
+                <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total a Pagar:<strong><h5>${totalPriceCart().toFixed(2)}{" "}</h5></strong>
+                <Button style={{margin:'10px'}} onClick={clearCart} variant="dark" size="sm">Vaciar Carrito</Button>        
+                <Button as={Link} to="/tienda" variant='warning' size="sm">Seguir comprando</Button>      
+                </td>
+                </tr>
+    </tbody>
+      </Table>
+      </Container>
+      <div>
+        <hr></hr>
+               {/* Checkout datos*/}
+			<h1>Datos del comprador</h1>
+         <Container >
+            <Form className='mb-3' onSubmit={createOrder} >
+      <Form.Group className="mb-3" >
+        <Form.Label>Nombre</Form.Label>
+        <Form.Control type="text"  name='name' placeholder="Nombre" value ={values.name} onChange={handleOnChange}/>
+      </Form.Group>
+      <Form.Group className="mb-3" >
+        <Form.Label>Apellido</Form.Label>
+        <Form.Control type="text" name='lastname' placeholder="Apellido" value={values.lastName} onChange={handleOnChange}/>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword"  >
+        <Form.Label>Teléfono</Form.Label>
+        <Form.Control type="phone" name='phone' placeholder="Teléfono" value={values.phone} onChange={handleOnChange}/>
+      </Form.Group>
+      <Button variant="warning" type="submit">
+        Enviar pedido
+      </Button>
+    </Form>  
+    </Container>
+
+		</div>
+
+
+
+
+
+
+
       </div>
-    })}
-      <h5>Total a pagar: ${totalPriceCart().toFixed(2)}{" "}</h5>
-      <Button onClick={clearCart}>Vaciar Carrito</Button>
-      <Button onClick={createOrder}>Check  out</Button>
-      </div>
+
+    
       
 
   
@@ -79,4 +148,6 @@ else {
 }//cierro Cart
 
 export default Cart;
+
+/*  <Button onClick={createOrder} variant="warning">Check out</Button>*/
 

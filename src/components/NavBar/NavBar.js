@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
       <Container >
-      <Navbar.Brand href="#home">
+      <Navbar.Brand as={Link} to="/tienda">
             <img
               alt=""
               src={logo}
@@ -31,7 +31,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav mt-5" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto mt-5">
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/checkout">Checkout</Nav.Link>
             <Nav.Link as={Link} to="/tienda">Tienda</Nav.Link>
             <NavDropdown title="Líneas" id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/lines/classic">Classic</NavDropdown.Item>

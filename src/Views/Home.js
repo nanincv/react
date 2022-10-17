@@ -1,7 +1,12 @@
+import './App.css';
+
 const Home = () => {
 
     return (
-    <div><h1>Hola a todos</h1></div>
+    <div>
+        <p>Hola a todos</p>
+    
+    </div>
 
     );
 };

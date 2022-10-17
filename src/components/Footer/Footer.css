@@ -1,14 +1,10 @@
-.Footer {
-    display: flex;
- }
+
  .foot {
     background-color: black;
        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-       padding: 10%;
-       font-size: 50px;
+       margin-top: 80px;
+       padding: 2%;
+       font-size: 15px;
        text-align: center;
        color: white;
-    }
- h1 {
-       color: aqua;
     }
