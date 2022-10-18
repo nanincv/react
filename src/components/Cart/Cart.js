@@ -64,7 +64,7 @@ const navigate = useNavigate()
 // cart
 
  if (cart.length === 0) {
-  return <div style= {{textAlign:"center", margin: "50vh"}}>
+  return <div style= {{textAlign:"center", margin: "20vh"}}>
     <p> Su carrito está vacío</p>
     <Button as={Link} to="/tienda" variant='warning'>Volver a la tienda</Button>
     </div>
