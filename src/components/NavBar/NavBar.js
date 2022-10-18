@@ -37,9 +37,6 @@ const NavBar = () => {
               <NavDropdown.Item as={Link} to="/lines/blends">Blends</NavDropdown.Item>
               <NavDropdown.Item href="/lines/soul">Soul</NavDropdown.Item>
               <NavDropdown.Item href="/lines/secret">Secret</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/lines/most">Más vendidos
-              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav className= "d-none d-sm-block">
