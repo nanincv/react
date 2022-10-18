@@ -8,7 +8,7 @@ En la página de carrito se incluye un formulario para llenar con los datos del 
 ### Una vez hecho el git clone del repo, instalar las dependencias con npm install
 ### Para levantar el proyecto, correr npm run start
 
-![1]((https://user-images.githubusercontent.com/38670496/196307033-a1d7b1cb-25df-4688-8b66-48085ff138c1.jpg)
+![1](https://user-images.githubusercontent.com/38670496/196307033-a1d7b1cb-25df-4688-8b66-48085ff138c1.jpg)
 
 ![gif_image](https://user-images.githubusercontent.com/38670496/196306352-859d2d8f-e403-4c6c-b91c-7d25e35fb57a.gif)
 
