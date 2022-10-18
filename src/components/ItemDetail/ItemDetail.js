@@ -34,7 +34,7 @@ const ItemDetail = ( {data} ) => {
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Sabor: <cite title="Source Title">{data.flavor}</cite></Card.Subtitle>
-        <Card.Text>Sabor: {data.description}</Card.Text>
+        <Card.Text>{data.description}</Card.Text>
         <Card.Subtitle >Precio: ${data.price}</Card.Subtitle>
         { isInCart ?
             <div style={{margin:"10px"}}>
