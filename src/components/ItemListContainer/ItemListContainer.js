@@ -37,7 +37,7 @@ return (
       <p> Nuestros sabores </p>
     </div>
     <div className='subtitle'>
-     <h1>• Línea {categoryid} • </h1>
+     <h1>{categoryid}</h1>
     </div>
         <div>
           <ItemList emulsiones = {items} />

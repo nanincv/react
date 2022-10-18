@@ -71,8 +71,8 @@ const navigate = useNavigate()
     }
 else { 
    return <div>
-    <Container >
-    <Table striped bordered hover>
+    <Container className='tabla' >
+    <Table striped bordered hover className='alig-items-end'>
             <thead>
                 <tr>
                 <th></th>
@@ -84,9 +84,9 @@ else {
             </thead>
             <tbody>{cart.map ( itemCart => {
          //Acá va tabla de bootstrap 
-    return <tr key={itemCart.id}>
-      <th><button style={{color:"red"}} onClick={()=> removeFromCart(itemCart.id)} >x</button></th>
-      <th><img alt={itemCart.title} width={"100px"} src={itemCart.img} ></img></th>
+    return <tr key={itemCart.id} >
+      <th><button style={{color:"black",border:"none"}} onClick={()=> removeFromCart(itemCart.id)} >x</button></th>
+      <th><img className='imgCart' alt={itemCart.title} width={"100px"} src={itemCart.img} ></img></th>
       <th>{itemCart.name}</th>
       <th>{itemCart.cant}</th>
       <th>$ {itemCart.price}</th>
@@ -109,8 +109,8 @@ else {
       <div>
         <hr></hr>
                {/* Checkout datos*/}
-			<h1>Datos del comprador</h1>
-         <Container >
+			<h3>Datos del comprador</h3>
+         <Container className='tabla' >
             <Form className='mb-3' onSubmit={createOrder} >
       <Form.Group className="mb-3" >
         <Form.Label>Nombre</Form.Label>

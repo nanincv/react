@@ -6,3 +6,14 @@
     color: #fff;
     font-size: 1em;
 }
+
+.imgCart{
+    width: 70px;
+    mix-blend-mode: multiply;
+  }
+
+  .tabla {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 900px;
+  }
