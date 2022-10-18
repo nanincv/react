@@ -10,7 +10,7 @@ En la página de carrito se incluye un formulario para llenar con los datos del 
 
 ![1](https://firebasestorage.googleapis.com/v0/b/gusteau-s.appspot.com/o/firechot_gusteaus.png?alt=media&token=98618728-94a9-467c-8741-00b4e9a63af0)
 
-![gif_image](![gusteausapp2](https://user-images.githubusercontent.com/38670496/196306352-859d2d8f-e403-4c6c-b91c-7d25e35fb57a.gif))
+![gif_image](https://user-images.githubusercontent.com/38670496/196306352-859d2d8f-e403-4c6c-b91c-7d25e35fb57a.gif)
 
 
 ### Languajes y herramientas:
