@@ -39,7 +39,9 @@ https://github.com/nanincv/tiendapp_Martorelli/tree/final
 
 ## Acerca del Autor ✒️
 **Natalia Martorelli** - *Diseñadora en Comunicación Visual & Desarrollador Web* 
-<p align="left"><a href="https://www.linkedin.com/in/natalia-martorelli-543a5957/" height="30" width="40" /></a></p>
+p align="left">
+<a href="https://www.linkedin.com/in/natalia-martorelli-543a5957/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/jorge-martinez-de-alegr%C3%ADa-29a22757" height="24" width="24" /></a>
+</p>
 
 
 
