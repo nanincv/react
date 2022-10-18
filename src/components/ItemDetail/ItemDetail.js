@@ -35,9 +35,10 @@ const ItemDetail = ( {data} ) => {
         <Card.Title>{data.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Sabor: <cite title="Source Title">{data.flavor}</cite></Card.Subtitle>
         <Card.Text>{data.description}</Card.Text>
+        <Card.Img src="https://firebasestorage.googleapis.com/v0/b/gusteau-s.appspot.com/o/kisher.png?alt=media&token=89600b21-35db-4a38-b132-a3ad88a198b0" style={{width:"300px", margin:"10px 0 20px 0"}}></Card.Img>
         <Card.Subtitle >Precio: ${data.price}</Card.Subtitle>
         { isInCart ?
-            <div style={{margin:"10px"}}>
+            <div style={{margin:"0 0 30px 0"}}>
             <Button variant="warning" style={{margin:'10px'}} as={Link} to="/cart" size="sm">Terminar compra</Button> 
             <Button variant="warning" style={{margin:'10px'}} as={Link} to="/tienda" size="sm">Seguir comprando</Button>
             </div>
