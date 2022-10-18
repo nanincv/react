@@ -1,16 +1,16 @@
-## E-commerce Gusteau's BAkery Emulsions
-# Nombre y apellido: Natalia Martorelli
+# E-commerce Gusteau's BAkery Emulsions
+## Nombre y apellido: Natalia Martorelli
 
 Tienda con catálogo de productos que puede navegarse por las diferentes "líneas" (categorías) de producto.
 En la página de carrito se incluye un formulario para llenar con los datos del comprador. Las órdenes se almacenan en una base de datos de Firebase.
 
 
-# Una vez hecho el git clone del repo, instalar las dependencias con npm install
-# Para levantar el proyecto, correr npm run start
+### Una vez hecho el git clone del repo, instalar las dependencias con npm install
+### Para levantar el proyecto, correr npm run start
 
 ![1](https://firebasestorage.googleapis.com/v0/b/gusteau-s.appspot.com/o/firechot_gusteaus.png?alt=media&token=98618728-94a9-467c-8741-00b4e9a63af0)
 
-![gif_image](https://firebasestorage.googleapis.com/v0/b/gusteau-s.appspot.com/o/gusteausapp2.gif?alt=media&token=ba3d08be-7289-4886-b431-9e71b0972b4c)
+![gif_image](![gusteausapp2](https://user-images.githubusercontent.com/38670496/196306352-859d2d8f-e403-4c6c-b91c-7d25e35fb57a.gif))
 
 
 ### Languajes y herramientas:
